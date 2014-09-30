@@ -1,0 +1,346 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/categories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - J+mUH6VYS1qsr7syp8oY
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '475'
+      Etag:
+      - '"-1073023155"'
+      X-Response-Time:
+      - 92ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:15 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '[{"id":"1c2e5a67-a1d0-4f19-8ed5-ae2646fc87b0","name":"New Category"},{"id":"4ed45507-ca97-472d-9a1a-ce1d9372f232","name":"Test
+        Category"},{"id":"54cb7018-0b35-45ee-b916-818321a6c398","name":"Clothes"},{"id":"65fd2a74-31a3-438c-b9fc-167e6cab2485","name":"Movies"},{"id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","name":"Awesome
+        New Category"},{"id":"c45a1e4a-a7ae-41db-abc5-140f94ffa27a","name":"Action
+        Movies"},{"id":"f641f88a-63e3-4cb5-bc1e-94ad5a8c0cb4","name":"Video Games"}]'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:17 GMT
+- request:
+    method: post
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items
+    body:
+      encoding: UTF-8
+      string: '{"id":"ItemA","name":"HERE UPDATE ME","description":"Awesome Spree
+        T-Shirt","variations":[{"id":null,"name":"SPREE-T-SHIRT-S","sku":"SPREE-T-SHIRT-S","price_money":{"amount":999,"currency_code":"USD"}},{"id":null,"name":"SPREE-T-SHIRT-M","sku":"SPREE-T-SHIRT-M","price_money":{"amount":999,"currency_code":"USD"}},{"id":null,"name":"SPREE-T-SHIRT-L","sku":"SPREE-T-SHIRT-L","price_money":{"amount":999,"currency_code":"USD"}}],"category_id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - rU6jmtXER9aPRQjhG0zJ
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '81'
+      X-Response-Time:
+      - 807ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:19 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"type":"unprocessable_entity","message":"Item or Variation id(s) already
+        exist"}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:21 GMT
+- request:
+    method: put
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items/ItemA
+    body:
+      encoding: UTF-8
+      string: '{"id":"ItemA","name":"HERE UPDATE ME","description":"Awesome Spree
+        T-Shirt","variations":[{"id":null,"name":"SPREE-T-SHIRT-S","sku":"SPREE-T-SHIRT-S","price_money":{"amount":999,"currency_code":"USD"}},{"id":null,"name":"SPREE-T-SHIRT-M","sku":"SPREE-T-SHIRT-M","price_money":{"amount":999,"currency_code":"USD"}},{"id":null,"name":"SPREE-T-SHIRT-L","sku":"SPREE-T-SHIRT-L","price_money":{"amount":999,"currency_code":"USD"}}],"category_id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - Ib8h1iSMRaOBDDyQUIzo
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1239'
+      X-Response-Time:
+      - 202ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:22 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"visibility":"PRIVATE","available_online":false,"available_for_pickup":false,"id":"ItemA","description":"Awesome
+        Spree T-Shirt","name":"HERE UPDATE ME","taxable":false,"category_id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","category":{"id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","name":"Awesome
+        New Category"},"variations":[{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"50499b27-ce66-4a38-8332-abd2d685f074","name":"SPREE-T-SHIRT-M","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-M","ordinal":1,"item_id":"ItemA","inventory_alert_threshold":0},{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"35aea6c6-9f01-4600-bee8-76a72b6cfcc4","name":"SPREE-T-SHIRT-S","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-S","ordinal":2,"item_id":"ItemA","inventory_alert_threshold":0},{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"7d100a8c-84de-46a3-ab82-2d08b48cb0cc","name":"SPREE-T-SHIRT-L","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-L","ordinal":3,"item_id":"ItemA","inventory_alert_threshold":0}],"modifier_lists":[],"fees":[],"images":[]}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:23 GMT
+- request:
+    method: get
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items/ItemA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - fTpyF6LKQW+BAPmZx5qT
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1239'
+      Etag:
+      - '"589837598"'
+      X-Response-Time:
+      - 66ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:24 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"visibility":"PRIVATE","available_online":false,"available_for_pickup":false,"id":"ItemA","description":"Awesome
+        Spree T-Shirt","name":"HERE UPDATE ME","taxable":false,"category_id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","category":{"id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","name":"Awesome
+        New Category"},"variations":[{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"50499b27-ce66-4a38-8332-abd2d685f074","name":"SPREE-T-SHIRT-M","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-M","ordinal":1,"item_id":"ItemA","inventory_alert_threshold":0},{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"35aea6c6-9f01-4600-bee8-76a72b6cfcc4","name":"SPREE-T-SHIRT-S","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-S","ordinal":2,"item_id":"ItemA","inventory_alert_threshold":0},{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"7d100a8c-84de-46a3-ab82-2d08b48cb0cc","name":"SPREE-T-SHIRT-L","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-L","ordinal":3,"item_id":"ItemA","inventory_alert_threshold":0}],"modifier_lists":[],"fees":[],"images":[]}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:25 GMT
+- request:
+    method: put
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items/ItemA/variations/35aea6c6-9f01-4600-bee8-76a72b6cfcc4
+    body:
+      encoding: UTF-8
+      string: '{"name":"SPREE-T-SHIRT-S","price_money":{"amount":999,"currency_code":"USD"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - XGQP7PDPQAantc/kDzd7
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '290'
+      X-Response-Time:
+      - 262ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:26 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"35aea6c6-9f01-4600-bee8-76a72b6cfcc4","name":"SPREE-T-SHIRT-S","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-S","ordinal":2,"item_id":"ItemA","inventory_alert_threshold":0}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:28 GMT
+- request:
+    method: put
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items/ItemA/variations/50499b27-ce66-4a38-8332-abd2d685f074
+    body:
+      encoding: UTF-8
+      string: '{"name":"SPREE-T-SHIRT-M","price_money":{"amount":999,"currency_code":"USD"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 1lZSh+ANQwSnTVxUFb5C
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '290'
+      X-Response-Time:
+      - 370ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:29 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"50499b27-ce66-4a38-8332-abd2d685f074","name":"SPREE-T-SHIRT-M","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-M","ordinal":1,"item_id":"ItemA","inventory_alert_threshold":0}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:31 GMT
+- request:
+    method: put
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items/ItemA/variations/7d100a8c-84de-46a3-ab82-2d08b48cb0cc
+    body:
+      encoding: UTF-8
+      string: '{"name":"SPREE-T-SHIRT-L","price_money":{"amount":999,"currency_code":"USD"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - h97b1YanS9WnTX6Nf2is
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '290'
+      X-Response-Time:
+      - 872ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:33 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"7d100a8c-84de-46a3-ab82-2d08b48cb0cc","name":"SPREE-T-SHIRT-L","price_money":{"currency_code":"USD","amount":999},"sku":"SPREE-T-SHIRT-L","ordinal":3,"item_id":"ItemA","inventory_alert_threshold":0}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:35 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/inventory
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - tKsy6aVIQjOnqmAKKK37
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '467'
+      Etag:
+      - '"1383855555"'
+      X-Response-Time:
+      - 1481ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:47 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '[{"variation_id":"3c653318-ef6a-4e6a-aff7-a61e8e1960fe","quantity_on_hand":10},{"variation_id":"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018","quantity_on_hand":29},{"variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392","quantity_on_hand":10},{"variation_id":"560c6118-2f28-40e2-bd20-63906371458e","quantity_on_hand":5},{"variation_id":"62e7d7f2-8c3f-4b87-aa0c-9f2ea7e1bca9","quantity_on_hand":44},{"variation_id":"da61c6e4-aaaf-4723-9565-1dfa20f0e56d","quantity_on_hand":2}]'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:49 GMT
+- request:
+    method: post
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/inventory/4c72dad8-d0ff-4b79-8a08-886b07cd6392
+    body:
+      encoding: UTF-8
+      string: '{"quantity_delta":0,"adjustment_type":"MANUAL_ADJUST"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - J/OEt7XeRGeLYgecyDsh
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '77'
+      X-Response-Time:
+      - 77ms
+      Date:
+      - Fri, 24 Oct 2014 12:37:49 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392","quantity_on_hand":10}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:37:51 GMT
+recorded_with: VCR 2.9.3

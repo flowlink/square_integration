@@ -1,0 +1,103 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/categories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - 9aG5LQk7Q1asSFdVl4sa
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '475'
+      Etag:
+      - '"-1073023155"'
+      X-Response-Time:
+      - 322ms
+      Date:
+      - Fri, 24 Oct 2014 12:39:23 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '[{"id":"1c2e5a67-a1d0-4f19-8ed5-ae2646fc87b0","name":"New Category"},{"id":"4ed45507-ca97-472d-9a1a-ce1d9372f232","name":"Test
+        Category"},{"id":"54cb7018-0b35-45ee-b916-818321a6c398","name":"Clothes"},{"id":"65fd2a74-31a3-438c-b9fc-167e6cab2485","name":"Movies"},{"id":"9b15dbc2-ffec-4599-ab00-a9c41b67b373","name":"Awesome
+        New Category"},{"id":"c45a1e4a-a7ae-41db-abc5-140f94ffa27a","name":"Action
+        Movies"},{"id":"f641f88a-63e3-4cb5-bc1e-94ad5a8c0cb4","name":"Video Games"}]'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:39:25 GMT
+- request:
+    method: post
+    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/items
+    body:
+      encoding: UTF-8
+      string: '{"id":"TESTING5","name":"Testing5","description":"Awesome Spree T-Shirt","variations":[{"id":null,"name":"SPREE-T-SHIRT-S","sku":"SPREE-T-SHIRT-S","price_money":{"amount":3999,"currency_code":"USD"}}],"category_id":"54cb7018-0b35-45ee-b916-818321a6c398"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - f58JWDxzSTCjiyIju+ff
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '614'
+      X-Response-Time:
+      - 392ms
+      Date:
+      - Fri, 24 Oct 2014 12:39:25 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '{"visibility":"PUBLIC","available_online":false,"available_for_pickup":false,"id":"TESTING5","description":"Awesome
+        Spree T-Shirt","name":"Testing5","taxable":false,"category_id":"54cb7018-0b35-45ee-b916-818321a6c398","category":{"id":"54cb7018-0b35-45ee-b916-818321a6c398","name":"Clothes"},"variations":[{"pricing_type":"FIXED_PRICING","track_inventory":false,"inventory_alert_type":"NONE","id":"5965cd77-92af-4889-9c42-7b2bc154c1b0","name":"SPREE-T-SHIRT-S","price_money":{"currency_code":"USD","amount":3999},"sku":"SPREE-T-SHIRT-S","ordinal":0,"item_id":"TESTING5"}],"modifier_lists":[],"fees":[],"images":[]}'
+    http_version: 
+  recorded_at: Fri, 24 Oct 2014 12:39:27 GMT
+recorded_with: VCR 2.9.3

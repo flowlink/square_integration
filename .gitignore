@@ -20,3 +20,4 @@
 
 .DS_Store
 public/assets
+spec/square_testing.yml

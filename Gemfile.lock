@@ -7,6 +7,13 @@ GIT
       jbuilder
       json
 
+GIT
+  remote: git://github.com/spree/hub_samples.git
+  revision: 901b27c6d128d5f392d4f9c3f2a6d9082f1bce96
+  specs:
+    hub_samples (1.0)
+      bson_ext (>= 1.5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -17,6 +24,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     addressable (2.3.6)
+    bson (1.11.1)
+    bson_ext (1.11.1)
+      bson (~> 1.11.1)
     byebug (3.4.2)
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
@@ -50,6 +60,10 @@ GEM
     hitimes (1.2.2)
     honeybadger (1.16.5)
       json
+    httmultiparty (0.3.16)
+      httparty (>= 0.7.3)
+      mimemagic
+      multipart-post
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -65,9 +79,11 @@ GEM
       rb-inotify (>= 0.9)
     lumberjack (1.0.9)
     method_source (0.8.2)
+    mimemagic (0.2.1)
     minitest (5.4.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    multipart-post (2.0.0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -138,7 +154,9 @@ DEPENDENCIES
   foreman
   guard-rspec
   honeybadger
+  httmultiparty
   httparty
+  hub_samples!
   pry
   pry-byebug
   rack-test

@@ -10,6 +10,7 @@ group :production do
 end
 
 gem 'httparty'
+gem 'httmultiparty'
 gem 'honeybadger'
 
 gem 'endpoint_base', github: 'spree/endpoint_base'
@@ -22,6 +23,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'hub_samples', github: 'spree/hub_samples'
   gem 'vcr'
   gem 'rspec'
   gem 'webmock'

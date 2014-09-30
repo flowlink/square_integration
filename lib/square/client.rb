@@ -1,37 +1,61 @@
 module Square
   class Client
-    include ::HTTParty
+    include ::HTTMultiParty
 
-    attr_reader :site_id, :headers, :auth
+    default_timeout 120 # upload kills
 
-    def initialize(site_id, app_key, app_token)
-      @auth    = {:app_key => user, :app_token => password}
-      @site_id = site_id
-      @headers = { "Content-Type" => "application/json", "Accept" => "application/json" }
+    attr_reader :headers, :app_id, :app_secret, :app_code
 
-      self.class.base_uri "https://connect.squareup.com/v1/me"
+    delegate :post, to: :class
+
+    def initialize(merchant_id, token)
+      @headers    = { "Content-Type"  => "application/json",
+                      "Accept"        => "application/json",
+                      "Authorization" => "Bearer #{token}" }
+
+      self.class.base_uri "https://connect.squareup.com/v1/#{merchant_id}"
     end
 
-    def send_order(payload)
-      # order_placed_hash   = Square::OrderBuilder.order_placed(self, payload)
-
-      options = {
-        headers: headers,
-        basic_auth: auth,
-        body: order_placed_hash.to_json
-      }
-
-      response = self.class.post('/register_sales', options)
-      validate_response(response)
+    def get(endpoint, extra_options = {})
+      request(:get, endpoint, extra_options)
     end
 
+    def post(endpoint, extra_options = {})
+      request(:post, endpoint, extra_options)
+    end
+
+    def put(endpoint, extra_options = {})
+      request(:put, endpoint, extra_options)
+    end
+
+    def extract_token(response)
+      response.headers["link"].to_s.match(/batch_token=(\w+)>;rel='next'/).to_a[1]
+    end
 
     private
+    def request(http_verb, endpoint, extra_options)
+      puts "#{http_verb.upcase} #{endpoint}"
+
+      validate_response(
+        self.class.send(http_verb,
+          "/#{endpoint}",
+          default_options.deep_merge(extra_options)
+        )
+      )
+    end
 
     def validate_response(response)
-      raise SquareEndpointError, response if Square::ErrorParser.response_has_errors?(response)
+      if Square::ErrorParser.response_has_errors?(response)
+        raise response["message"]
+      end
+
       response
     end
 
+    def default_options
+      {
+        headers: headers
+      }
+    end
   end
 end
