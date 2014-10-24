@@ -17,6 +17,7 @@ module Square
             id: variant['square_id'],
             name: variant['name'] || variant['sku'],
             sku: variant['sku'],
+            track_inventory: true,
             price_money: {
               amount: to_cents(variant['price']),
               currency_code: "USD"
