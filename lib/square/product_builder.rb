@@ -66,7 +66,7 @@ module Square
             {
               'square_id'  => variant['id'],
               'sku'        => sku,
-              'price'      => variant['price_money']['amount'].to_f,
+              'price'      => to_money(variant['price_money']['amount']),
               'quantity'   => 0,
               'name'       => variant['name']
             }
@@ -76,6 +76,10 @@ module Square
 
       def to_cents(float)
         ((float || 0).to_f * 100).to_i
+      end
+
+      def to_money(cents)
+        (cents.to_f || 0) / 100
       end
     end
   end
