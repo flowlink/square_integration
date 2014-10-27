@@ -36,7 +36,7 @@ describe SquareEndpoint do
 
   describe '/get_inventory' do
     let(:inventory_fixture) do
-      {"id"=>"MEGAP", "product_id"=>"MEGAP", "location"=>"default", "square_id"=>"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018", "quantity"=>29}
+      {"id"=>"AWESOME-T-SHIRT", "product_id"=>"AWESOME-T-SHIRT", "location"=>"default", "square_id"=>"390583f8-3fa5-4544-9088-e20563f0f779", "quantity"=>5}
     end
 
     it 'returns inventory information' do
@@ -75,7 +75,7 @@ describe SquareEndpoint do
 
   describe '/get_products' do
     let(:product_fixture) do
-      {"id"=>"36da439a-5bec-4105-89fe-062bdc57683a", "name"=>"Mega Drive", "description"=>"The Sega Genesis, known as Mega Drive (Japanese: メガドライブ Hepburn: Mega Doraibu?) in most regions outside North America, is a 16-bit video game console which was developed and sold by Sega Enterprises, Ltd. The Genesis is Sega's third console and the successor to the Master System. Sega first released the console as the Mega Drive in Japan in 1988, followed by a North American debut under the Genesis moniker in 1989. In 1990, the console was released as the Mega Drive by Virgin Mastertronic in Europe, by Ozisoft in Australasia, and by Tec Toy in Brazil. In South Korea it was distributed by Samsung and was first known as the Super Gam*Boy and later as the Super Aladdin Boy.", "taxons"=>[["Categories", "Video Games"]], "images"=>[{"url"=>"https://square-production.s3.amazonaws.com/files/21bc1a6a8fc7d254049990e4723d0ed7/original.jpeg", "position"=>1, "title"=>"Mega Drive", "type"=>"thumbnail"}], "variants"=>[{"square_id"=>"62e7d7f2-8c3f-4b87-aa0c-9f2ea7e1bca9", "sku"=>"MEGA", "price"=>100.0, "quantity"=>0, "name"=>"Regular"}, {"square_id"=>"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018", "sku"=>"MEGAP", "price"=>200.0, "quantity"=>0, "name"=>"Pro Version"}]}
+      {"id"=>"36da439a-5bec-4105-89fe-062bdc57683a", "name"=>"Mega Drive", "description"=>"The Sega Genesis, known as Mega Drive (Japanese: メガドライブ Hepburn: Mega Doraibu?) in most regions outside North America, is a 16-bit video game console which was developed and sold by Sega Enterprises, Ltd. The Genesis is Sega's third console and the successor to the Master System. Sega first released the console as the Mega Drive in Japan in 1988, followed by a North American debut under the Genesis moniker in 1989. In 1990, the console was released as the Mega Drive by Virgin Mastertronic in Europe, by Ozisoft in Australasia, and by Tec Toy in Brazil. In South Korea it was distributed by Samsung and was first known as the Super Gam*Boy and later as the Super Aladdin Boy.", "taxons"=>[["Categories", "Video Games"]], "images"=>[{"url"=>"https://d2isyty7gbnm74.cloudfront.net/oTfbcMqC5V7uSsvLCxOgZQ4hzww=/https://square-production.s3.amazonaws.com/files/161246f8d84619f8f7a521844724daa2/original.jpeg", "position"=>1, "title"=>"Mega Drive", "type"=>"thumbnail"}], "variants"=>[{"square_id"=>"62e7d7f2-8c3f-4b87-aa0c-9f2ea7e1bca9", "sku"=>"MEGA", "price"=>100.0, "quantity"=>0, "name"=>"Regular"}, {"square_id"=>"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018", "sku"=>"MEGAP", "price"=>200.0, "quantity"=>0, "name"=>"Pro Version"}]}
     end
 
     let(:inventory_fixture) do
@@ -98,9 +98,9 @@ describe SquareEndpoint do
   describe '/add_product' do
     let(:product) do
       product = Hub::Samples::Product.object['product'].merge({
-        "id"   => 'TESTING5',
-        "sku"  => 'TESTING5',
-        "name" => 'Testing5'
+        "id"   => 'TESTING7',
+        "sku"  => 'TESTING7',
+        "name" => 'Testing7'
       })
       product[:images] = [] # upload mysteriously fails under rspec
       product
@@ -110,7 +110,7 @@ describe SquareEndpoint do
       VCR.use_cassette('add_product') do
         post '/add_product', request.merge({ product: product }).to_json, {}
 
-        expect(json_response['summary']).to eq 'Product TESTING5 successfully created in Square'
+        expect(json_response['summary']).to eq 'Product TESTING7 successfully created in Square'
       end
     end
   end

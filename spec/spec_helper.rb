@@ -34,6 +34,7 @@ VCR.configure do |c|
     c.filter_sensitive_data(field) {|_| testing_credentials[field] }
   end
 
+  c.filter_sensitive_data("SQUARE_APP_ID") {|_| ENV["SQUARE_APP_ID"]}
   c.filter_sensitive_data("AUTHORIZATION") do |interaction|
     interaction.request.headers['Authorization'][0]
   end

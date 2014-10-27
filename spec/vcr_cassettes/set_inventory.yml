@@ -1,8 +1,49 @@
 ---
 http_interactions:
 - request:
+    method: post
+    uri: https://connect.squareup.com/oauth2/clients/SQUARE_APP_ID/access-token/renew
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"square_token"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - IE=edge,chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Request-Id:
+      - e518c5d1-ed30-4135-a784-262323f77a47
+      X-Runtime:
+      - '0.027000'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"square_token","token_type":"bearer","merchant_id":"square_merchant_id","expires_at":"2014-11-26T13:38:33Z"}'
+    http_version: 
+  recorded_at: Mon, 27 Oct 2014 20:43:31 GMT
+- request:
     method: get
-    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/inventory
+    uri: https://connect.squareup.com/v1/square_merchant_id/inventory
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +68,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Request-Id:
-      - tKsy6aVIQjOnqmAKKK37
+      - sNzdTfyUTQGlICQ0pJ97
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Expose-Headers:
@@ -35,26 +76,26 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '467'
+      - '926'
       Etag:
-      - '"1383855555"'
+      - '"201039672"'
       X-Response-Time:
-      - 1481ms
+      - 72ms
       Date:
-      - Fri, 24 Oct 2014 12:37:47 GMT
+      - Mon, 27 Oct 2014 20:43:32 GMT
       Keep-Alive:
       - timeout=60
     body:
       encoding: UTF-8
-      string: '[{"variation_id":"3c653318-ef6a-4e6a-aff7-a61e8e1960fe","quantity_on_hand":10},{"variation_id":"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018","quantity_on_hand":29},{"variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392","quantity_on_hand":10},{"variation_id":"560c6118-2f28-40e2-bd20-63906371458e","quantity_on_hand":5},{"variation_id":"62e7d7f2-8c3f-4b87-aa0c-9f2ea7e1bca9","quantity_on_hand":44},{"variation_id":"da61c6e4-aaaf-4723-9565-1dfa20f0e56d","quantity_on_hand":2}]'
+      string: '[{"variation_id":"390583f8-3fa5-4544-9088-e20563f0f779","quantity_on_hand":5},{"variation_id":"3c653318-ef6a-4e6a-aff7-a61e8e1960fe","quantity_on_hand":10},{"variation_id":"3ee8dfe6-5a4b-4cd9-83dc-9c45accb5018","quantity_on_hand":0},{"variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392","quantity_on_hand":0},{"variation_id":"560c6118-2f28-40e2-bd20-63906371458e","quantity_on_hand":0},{"variation_id":"562d03c4-ebde-4042-bd20-3d510fb81d88","quantity_on_hand":0},{"variation_id":"62e7d7f2-8c3f-4b87-aa0c-9f2ea7e1bca9","quantity_on_hand":0},{"variation_id":"7240565e-b99b-4c4f-ae0b-394057d2b7f2","quantity_on_hand":0},{"variation_id":"7d48b316-4042-471d-b527-15414a7d2723","quantity_on_hand":0},{"variation_id":"85fe4c6f-2cd1-46b4-91c2-9bd57c7dfba1","quantity_on_hand":0},{"variation_id":"cba6035d-f70a-45ea-95e7-74b54995ae03","quantity_on_hand":0},{"variation_id":"da61c6e4-aaaf-4723-9565-1dfa20f0e56d","quantity_on_hand":0}]'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 12:37:49 GMT
+  recorded_at: Mon, 27 Oct 2014 20:43:32 GMT
 - request:
     method: post
-    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/inventory/4c72dad8-d0ff-4b79-8a08-886b07cd6392
+    uri: https://connect.squareup.com/v1/square_merchant_id/inventory/4c72dad8-d0ff-4b79-8a08-886b07cd6392
     body:
       encoding: UTF-8
-      string: '{"quantity_delta":0,"adjustment_type":"MANUAL_ADJUST"}'
+      string: '{"quantity_delta":10,"adjustment_type":"MANUAL_ADJUST"}'
     headers:
       Content-Type:
       - application/json
@@ -76,7 +117,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Request-Id:
-      - J/OEt7XeRGeLYgecyDsh
+      - MS8t25VtRla/rhBW/VaE
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Expose-Headers:
@@ -86,14 +127,14 @@ http_interactions:
       Content-Length:
       - '77'
       X-Response-Time:
-      - 77ms
+      - 117ms
       Date:
-      - Fri, 24 Oct 2014 12:37:49 GMT
+      - Mon, 27 Oct 2014 20:43:33 GMT
       Keep-Alive:
       - timeout=60
     body:
       encoding: UTF-8
       string: '{"variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392","quantity_on_hand":10}'
     http_version: 
-  recorded_at: Fri, 24 Oct 2014 12:37:51 GMT
+  recorded_at: Mon, 27 Oct 2014 20:43:34 GMT
 recorded_with: VCR 2.9.3
