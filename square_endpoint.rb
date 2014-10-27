@@ -58,9 +58,7 @@ class SquareEndpoint < EndpointBase::Sinatra::Base
   end
 
   post %r{/(add|update)_product} do
-    summary, square_id = Square::Product.new(square_client).add_or_update(@payload[:product])
-
-    add_object 'product', { id: @payload[:product][:id], square_id: square_id }
+    summary = Square::Product.new(square_client).add_or_update(@payload[:product])
 
     result 200, summary
   end

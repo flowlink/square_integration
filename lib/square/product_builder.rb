@@ -3,7 +3,7 @@ module Square
     class << self
       def wombat_to_square(payload, category_id)
         {
-          id: payload['square_id'] || payload['id'],
+          id: payload['id'],
           name: payload['name'],
           description: payload['description'],
           variations: wombat_variants_to_square(payload['variants']),
@@ -29,7 +29,6 @@ module Square
       def parse_product(square_product)
         {
           'id'          => square_product['id'],
-          'square_id'   => square_product['id'],
           'name'        => square_product['name'],
           'description' => square_product.has_key?('description') ? square_product['description'] : '',
           'images'   => build_image(square_product),

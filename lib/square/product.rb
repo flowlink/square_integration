@@ -31,7 +31,7 @@ module Square
         response = square_client.post("items", body: square_product.to_json)
         upload_master_image!(payload)
 
-        return "Product #{payload[:sku]} successfully created in Square", response["id"]
+        "Product #{payload[:sku]} successfully created in Square"
       rescue => e
         if e.message == "Item or Variation id(s) already exist"
           update(payload)
@@ -44,13 +44,13 @@ module Square
     def update(payload)
       build_square_product!(payload)
 
-      id = payload[:square_id] || payload[:id]
+      id = payload[:id]
       response = square_client.put("items/#{id}", body: square_product.to_json)
 
       update_variants!(id)
       upload_master_image!(payload)
 
-      return "Product #{payload[:sku]} successfully updated in Square", response["id"]
+      "Product #{payload[:sku]} successfully updated in Square"
     end
 
     def update_variants!(id)
