@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://connect.squareup.com/v1/5C96A4NQP74AC/orders?limit=100&order=DESC
+    uri: https://connect.squareup.com/v1/square_merchant_id/orders?limit=100&order=DESC
     body:
       encoding: US-ASCII
       string: ''
@@ -27,7 +27,7 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       X-Request-Id:
-      - HhXWh7RJR+usdU40Ud4L
+      - QYDtGhW2SaCSwoEly+P0
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Expose-Headers:
@@ -37,31 +37,83 @@ http_interactions:
       Content-Length:
       - '4543'
       Etag:
-      - '"1627501091"'
+      - '"1822495440"'
       X-Response-Time:
-      - 250ms
+      - 547ms
       Date:
-      - Fri, 24 Oct 2014 12:37:44 GMT
+      - Mon, 27 Oct 2014 19:32:11 GMT
       Keep-Alive:
       - timeout=60
     body:
       encoding: UTF-8
-      string: '[{"subtotal_money":{"currency_code":"USD","amount":100},"tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1840"},"id":"QJ31BXR4","merchant_token":"5C96A4NQP74AC","shipping_address":{"address_line_1":"4600
-        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"state":"COMPLETED","created_at":"2014-10-21T16:44:19Z","payment_id":"lrOQ3bzgNrjXlohcoG7KvxMF","recipient_phone_number":"+1
-        408-399-4719","updated_at":"2014-10-21T17:11:52Z","total_discount_money":{"currency_code":"USD","amount":0},"shipped_tracking_number":"123","recipient_name":"Spree
-        ","expires_at":"2014-10-28T16:55:16Z","total_tax_money":{"currency_code":"USD","amount":0},"total_shipping_money":{"currency_code":"USD","amount":0},"buyer_email":"wesleyketchum@gmail.com","total_price_money":{"currency_code":"USD","amount":100}},{"subtotal_money":{"currency_code":"USD","amount":100},"tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1111"},"id":"EDA6WWVW","merchant_token":"5C96A4NQP74AC","shipping_address":{"address_line_1":"4600
-        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"state":"REJECTED","created_at":"2014-10-16T19:12:43Z","payment_id":"FA2PDc1cHFUkNhW06Fw5cvMF","recipient_phone_number":"+1
-        408-399-4719","updated_at":"2014-10-16T19:12:44Z","total_discount_money":{"currency_code":"USD","amount":0},"recipient_name":"Spree
-        ","total_tax_money":{"currency_code":"USD","amount":0},"total_shipping_money":{"currency_code":"USD","amount":0},"buyer_email":"sameer@spreecommerce.com","total_price_money":{"currency_code":"USD","amount":100}},{"subtotal_money":{"currency_code":"USD","amount":100},"tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1111"},"id":"UXCG2LOG","merchant_token":"5C96A4NQP74AC","shipping_address":{"address_line_1":"4600
-        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"state":"REJECTED","created_at":"2014-10-16T19:12:41Z","payment_id":"zB10qMkdC8nSkJdlHlm1JzMF","recipient_phone_number":"+1
-        408-399-4719","updated_at":"2014-10-16T19:12:41Z","total_discount_money":{"currency_code":"USD","amount":0},"recipient_name":"Spree
-        ","total_tax_money":{"currency_code":"USD","amount":0},"total_shipping_money":{"currency_code":"USD","amount":0},"buyer_email":"sameer@spreecommerce.com","total_price_money":{"currency_code":"USD","amount":100}},{"subtotal_money":{"currency_code":"USD","amount":100},"tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1776"},"id":"LW5QEP7R","merchant_token":"5C96A4NQP74AC","shipping_address":{"address_line_1":"4600
-        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"state":"CANCELED","created_at":"2014-09-24T20:00:11Z","payment_id":"a4PCjuTSdXzuZT8N2MWJoxMF","recipient_phone_number":"+1
-        408-399-4719","updated_at":"2014-10-01T21:42:47Z","total_discount_money":{"currency_code":"USD","amount":0},"recipient_name":"Sameer
-        Gulati","expires_at":"2014-10-01T20:52:31Z","total_tax_money":{"currency_code":"USD","amount":0},"total_shipping_money":{"currency_code":"USD","amount":0},"buyer_email":"sameer@spreecommerce.com","total_price_money":{"currency_code":"USD","amount":100}},{"subtotal_money":{"currency_code":"USD","amount":1000},"tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":1000},"card_brand":"VISA","pan_suffix":"1111"},"id":"2OZQS1Y5","merchant_token":"5C96A4NQP74AC","shipping_address":{"address_line_1":"4600
-        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"state":"REJECTED","created_at":"2014-09-24T19:56:45Z","payment_id":"9CxE4Lwc44EzZnYN5xOVHxMF","recipient_phone_number":"+1
-        408-399-4719","updated_at":"2014-09-24T19:56:46Z","total_discount_money":{"currency_code":"USD","amount":0},"recipient_name":"Spree
-        Commerce","total_tax_money":{"currency_code":"USD","amount":0},"total_shipping_money":{"currency_code":"USD","amount":0},"buyer_email":"sameer@spreecommerce.com","total_price_money":{"currency_code":"USD","amount":1000}}]'
-    http_version:
-  recorded_at: Fri, 24 Oct 2014 12:37:46 GMT
+      string: '[{"merchant_token":"square_merchant_id","subtotal_money":{"currency_code":"USD","amount":100},"shipped_tracking_number":"123","total_price_money":{"currency_code":"USD","amount":100},"recipient_name":"Spree
+        ","buyer_email":"wesleyketchum@gmail.com","recipient_phone_number":"+1 408-399-4719","total_shipping_money":{"currency_code":"USD","amount":0},"shipping_address":{"address_line_1":"4600
+        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"total_tax_money":{"currency_code":"USD","amount":0},"created_at":"2014-10-21T16:44:19Z","total_discount_money":{"currency_code":"USD","amount":0},"expires_at":"2014-10-28T16:55:16Z","state":"COMPLETED","payment_id":"lrOQ3bzgNrjXlohcoG7KvxMF","updated_at":"2014-10-21T17:11:52Z","id":"QJ31BXR4","tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1840"}},{"merchant_token":"square_merchant_id","subtotal_money":{"currency_code":"USD","amount":100},"total_price_money":{"currency_code":"USD","amount":100},"recipient_name":"Spree
+        ","buyer_email":"sameer@spreecommerce.com","recipient_phone_number":"+1 408-399-4719","total_shipping_money":{"currency_code":"USD","amount":0},"shipping_address":{"address_line_1":"4600
+        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"total_tax_money":{"currency_code":"USD","amount":0},"created_at":"2014-10-16T19:12:43Z","total_discount_money":{"currency_code":"USD","amount":0},"state":"REJECTED","payment_id":"FA2PDc1cHFUkNhW06Fw5cvMF","updated_at":"2014-10-16T19:12:44Z","id":"EDA6WWVW","tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1111"}},{"merchant_token":"square_merchant_id","subtotal_money":{"currency_code":"USD","amount":100},"total_price_money":{"currency_code":"USD","amount":100},"recipient_name":"Spree
+        ","buyer_email":"sameer@spreecommerce.com","recipient_phone_number":"+1 408-399-4719","total_shipping_money":{"currency_code":"USD","amount":0},"shipping_address":{"address_line_1":"4600
+        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"total_tax_money":{"currency_code":"USD","amount":0},"created_at":"2014-10-16T19:12:41Z","total_discount_money":{"currency_code":"USD","amount":0},"state":"REJECTED","payment_id":"zB10qMkdC8nSkJdlHlm1JzMF","updated_at":"2014-10-16T19:12:41Z","id":"UXCG2LOG","tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1111"}},{"merchant_token":"square_merchant_id","subtotal_money":{"currency_code":"USD","amount":100},"total_price_money":{"currency_code":"USD","amount":100},"recipient_name":"Sameer
+        Gulati","buyer_email":"sameer@spreecommerce.com","recipient_phone_number":"+1
+        408-399-4719","total_shipping_money":{"currency_code":"USD","amount":0},"shipping_address":{"address_line_1":"4600
+        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"total_tax_money":{"currency_code":"USD","amount":0},"created_at":"2014-09-24T20:00:11Z","total_discount_money":{"currency_code":"USD","amount":0},"expires_at":"2014-10-01T20:52:31Z","state":"CANCELED","payment_id":"a4PCjuTSdXzuZT8N2MWJoxMF","updated_at":"2014-10-01T21:42:47Z","id":"LW5QEP7R","tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1776"}},{"merchant_token":"square_merchant_id","subtotal_money":{"currency_code":"USD","amount":1000},"total_price_money":{"currency_code":"USD","amount":1000},"recipient_name":"Spree
+        Commerce","buyer_email":"sameer@spreecommerce.com","recipient_phone_number":"+1
+        408-399-4719","total_shipping_money":{"currency_code":"USD","amount":0},"shipping_address":{"address_line_1":"4600
+        East West Highway","address_line_2":"800","locality":"Bethesda","administrative_district_level_1":"MD","postal_code":"20814","country_code":"US"},"total_tax_money":{"currency_code":"USD","amount":0},"created_at":"2014-09-24T19:56:45Z","total_discount_money":{"currency_code":"USD","amount":0},"state":"REJECTED","payment_id":"9CxE4Lwc44EzZnYN5xOVHxMF","updated_at":"2014-09-24T19:56:46Z","id":"2OZQS1Y5","tender":{"type":"CREDIT_CARD","total_money":{"currency_code":"USD","amount":1000},"card_brand":"VISA","pan_suffix":"1111"}}]'
+    http_version: 
+  recorded_at: Mon, 27 Oct 2014 19:32:11 GMT
+- request:
+    method: get
+    uri: https://connect.squareup.com/v1/square_merchant_id/payments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - AUTHORIZATION
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Strict-Transport-Security:
+      - max-age=2592000
+      X-Frame-Options:
+      - DENY
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Request-Id:
+      - GlbdBGYkSZWeH//7NgiJ
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - Link
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '3516'
+      Etag:
+      - '"-480370413"'
+      X-Response-Time:
+      - 580ms
+      Date:
+      - Mon, 27 Oct 2014 19:32:12 GMT
+      Keep-Alive:
+      - timeout=60
+    body:
+      encoding: UTF-8
+      string: '[{"device":{},"additive_tax_money":{"currency_code":"USD","amount":0},"merchant_id":"square_merchant_id","tip_money":{"currency_code":"USD","amount":0},"refunds":[{"type":"FULL","created_at":"2014-10-01T21:42:47Z","processed_at":"2014-10-01T21:42:47Z","reason":"Expired
+        order","refunded_money":{"currency_code":"USD","amount":-100}}],"inclusive_tax":[],"creator_id":"square_merchant_id","id":"a4PCjuTSdXzuZT8N2MWJoxMF","created_at":"2014-09-24T20:00:11Z","refunded_money":{"currency_code":"USD","amount":-100},"inclusive_tax_money":{"currency_code":"USD","amount":0},"swedish_rounding_money":{"currency_code":"USD","amount":0},"tender":[{"type":"CREDIT_CARD","name":"Credit
+        Card","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1776","entry_method":"WEB_FORM"}],"total_collected_money":{"currency_code":"USD","amount":100},"net_total_money":{"currency_code":"USD","amount":97},"itemizations":[{"name":"ItemA","quantity":"1.00000000","item_variation_name":"Item
+        Name B","item_detail":{"category_name":"Test Category","sku":"SKUB","item_id":"ae84b5f0-da57-40ca-884e-11b1cdbae678","item_variation_id":"4c72dad8-d0ff-4b79-8a08-886b07cd6392"},"total_money":{"currency_code":"USD","amount":100},"single_quantity_money":{"currency_code":"USD","amount":100},"gross_sales_money":{"currency_code":"USD","amount":100},"discount_money":{"currency_code":"USD","amount":0},"net_sales_money":{"currency_code":"USD","amount":100},"taxes":[],"discounts":[],"modifiers":[]}],"discount_money":{"currency_code":"USD","amount":0},"processing_fee_money":{"currency_code":"USD","amount":-3},"receipt_url":"https://squareup.com/receipt/preview/a4PCjuTSdXzuZT8N2MWJoxMF","payment_url":"https://squareup.com/dashboard/sales/transactions/a4PCjuTSdXzuZT8N2MWJoxMF","tax_money":{"currency_code":"USD","amount":0},"additive_tax":[]},{"device":{},"additive_tax_money":{"currency_code":"USD","amount":0},"merchant_id":"square_merchant_id","tip_money":{"currency_code":"USD","amount":0},"refunds":[],"inclusive_tax":[],"creator_id":"square_merchant_id","id":"lrOQ3bzgNrjXlohcoG7KvxMF","created_at":"2014-10-21T16:44:19Z","refunded_money":{"currency_code":"USD","amount":0},"inclusive_tax_money":{"currency_code":"USD","amount":0},"swedish_rounding_money":{"currency_code":"USD","amount":0},"tender":[{"type":"CREDIT_CARD","name":"Credit
+        Card","total_money":{"currency_code":"USD","amount":100},"card_brand":"VISA","pan_suffix":"1840","entry_method":"WEB_FORM"}],"total_collected_money":{"currency_code":"USD","amount":100},"net_total_money":{"currency_code":"USD","amount":97},"itemizations":[{"name":"ItemA","quantity":"1.00000000","notes":"Some
+        description here.","item_variation_name":"Regular","item_detail":{"category_name":"Test
+        Category","sku":"SKUA","item_id":"ae84b5f0-da57-40ca-884e-11b1cdbae678","item_variation_id":"da61c6e4-aaaf-4723-9565-1dfa20f0e56d"},"total_money":{"currency_code":"USD","amount":100},"single_quantity_money":{"currency_code":"USD","amount":100},"gross_sales_money":{"currency_code":"USD","amount":100},"discount_money":{"currency_code":"USD","amount":0},"net_sales_money":{"currency_code":"USD","amount":100},"taxes":[],"discounts":[],"modifiers":[]}],"discount_money":{"currency_code":"USD","amount":0},"processing_fee_money":{"currency_code":"USD","amount":-3},"receipt_url":"https://squareup.com/receipt/preview/lrOQ3bzgNrjXlohcoG7KvxMF","payment_url":"https://squareup.com/dashboard/sales/transactions/lrOQ3bzgNrjXlohcoG7KvxMF","tax_money":{"currency_code":"USD","amount":0},"additive_tax":[]}]'
+    http_version: 
+  recorded_at: Mon, 27 Oct 2014 19:32:12 GMT
 recorded_with: VCR 2.9.3

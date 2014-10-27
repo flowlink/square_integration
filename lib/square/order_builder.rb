@@ -2,7 +2,7 @@ module Square
   class OrderBuilder
     class << self
 
-      def parse_order(square_order, client)
+      def parse_order(square_order, payment)
         total_adjustments    = 0
         total_shipping_money = money(square_order['total_shipping_money'])
         total_tax_money      = money(square_order['total_tax_money'])
@@ -44,7 +44,8 @@ module Square
           shipping_address:  parse_address(square_order),
           billing_address:   parse_address(square_order),
           adjustments:       adjustments,
-          payments:          [parse_payments(square_order)]
+          payments:          [parse_payments(square_order)],
+          line_items:        parse_line_items(payment)
         }
       end
 
@@ -73,6 +74,21 @@ module Square
           payment_method:  square_order['tender']['type'],
           card_brand:      square_order['tender']['card_brand']
         }
+      end
+
+      def parse_line_items(payment)
+        if payment
+          payment["itemizations"].map do |item|
+            {
+              product_id: item["item_detail"]["sku"],
+              name: item["name"],
+              quantity: item["quantity"].to_i,
+              price: money(item["total_money"])
+            }
+          end
+        else
+          []
+        end
       end
 
       def money(value)

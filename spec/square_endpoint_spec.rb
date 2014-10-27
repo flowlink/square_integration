@@ -172,7 +172,8 @@ describe SquareEndpoint do
           "shipping_address",
           "billing_address",
           "adjustments",
-          "payments"
+          "payments",
+          "line_items"
         ].each do |important_key|
           expect(json_response['orders'][0][important_key]).to be
         end

@@ -11,13 +11,15 @@ module Square
 
       begin
         response = square_client.get("orders", options(token || nil))
+        payments = square_client.get("payments")
 
         most_recent_order_updated_at = Time.parse(response.first['updated_at']) rescue nil
 
         response.each do |order|
           break if Time.parse(order['updated_at']) <= since
 
-          orders << Square::OrderBuilder.parse_order(order, self)
+          payment = payments.find {|p| p["id"] == order["payment_id"]}
+          orders << Square::OrderBuilder.parse_order(order, payment)
         end
 
       end while token = square_client.extract_token(response)
