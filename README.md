@@ -2,10 +2,12 @@
 
 This is a fully hosted and supported integration for use with the [Wombat](http://wombat.co) product. With this integration you can perform the following functions:
 
-* Wombat will pull Orders from Square:
-* Wombat will sync product data with Square:
-* Wombat will sync inventory with Square
-* Wombat can send shipment data to square
+* Send new products to Square
+* Send product updates to Square
+* Send shipment updates to Square
+* Get products from Square
+* Get inventory from Square
+* Get orders from Square
 
 Square software works on any computer, laptop or tablet with internet access.
 
